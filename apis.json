@@ -1,0 +1,81 @@
+{
+    "name": "Viber",
+    "description": "Viber is a cross-platform instant messaging and voice over IP application operated by Japanese multinational company Rakuten, provided as freeware for the Microsoft Windows, macOS, Linux, Android and iOS platforms.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28758-developers-viber-com.jpg",
+    "tags": [
+        "have api",
+        "messages",
+        "telecommunications"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/viber\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Viber",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28758-developers-viber-com.jpg",
+            "humanURL": "https:\/\/developers.viber.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/viber-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Blog",
+            "url": "https:\/\/developers.viber.com\/blog\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/viber-media"
+        },
+        {
+            "type": "Documentation",
+            "url": "https:\/\/developers.viber.com\/docs\/"
+        },
+        {
+            "type": "Email",
+            "url": "media@viber.com"
+        },
+        {
+            "type": "Email",
+            "url": "privacy@viber.com"
+        },
+        {
+            "type": "Email",
+            "url": "notice@viber.com"
+        },
+        {
+            "type": "Email",
+            "url": "support@viber.com"
+        },
+        {
+            "type": "Email",
+            "url": "CaliforniaRequest@viber.com"
+        },
+        {
+            "type": "Email",
+            "url": "Viberforeigndispute@viber.com"
+        },
+        {
+            "type": "Email",
+            "url": "techsupport@viber.com"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/Viber"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/developers.viber.com"
+        }
+    ]
+}

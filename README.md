@@ -64,5 +64,13 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Rakuten Viber is a company surfaced via the API Evangelist harvest backlog (source: market-gap) and added to the network as a stub for full-pipeline profiling.
-- https://www.viber.com
+Rakuten Viber is a messaging and calling app. Its developer hub at https://developers.viber.com publishes the **Viber REST Bot API** (`https://chatapi.viber.com/pa`), used to build bots that receive callbacks via webhook and send, broadcast and look up messages and users. Official Node.js and Python bot libraries are documented alongside it.
+
+## APIs
+
+- **Viber REST Bot API** — [documentation](https://developers.viber.com/docs/api/rest-bot-api/). Six POST operations (`set_webhook`, `send_message`, `broadcast_message`, `get_account_info`, `get_user_details`, `get_online`), authenticated with the `X-Viber-Auth-Token` header.
+  Contract: [openapi/_ae-authored/viber-rest-bot-api.yml](openapi/_ae-authored/viber-rest-bot-api.yml) — **generated from documentation** by API Evangelist; Viber publishes no OpenAPI. Request schemas carry only the documented top-level fields.
+
+## Provenance
+
+Profiled 2026-10-13 (enrichment pass local-v5). No machine-readable spec was found on viber.com hosts, in the Viber GitHub org, or via `/llms.txt` (403). Everything else in this repo was probed or derived by the API Evangelist pipeline; each file carries its own `method`/`source` frontmatter.

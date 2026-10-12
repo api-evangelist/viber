@@ -1,0 +1,45 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/viber-rest-bot-api.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.viber.com, www.viber.com, account.viber.com, chats.viber.com;
+  verdict opaque (https://www.viber.com/mcp answered 403: the edge authenticates before it routes, which proves nothing either way). Candidate
+  tools below are derived from the 6 operation(s) in the provider''s own OpenAPI (6 listed); they describe what a server WOULD expose, not one
+  that exists.'
+tools:
+- name: set_webhook
+  operationId: setWebhook
+  method: POST
+  path: /set_webhook
+  description: Set or remove the account webhook
+- name: send_message
+  operationId: sendMessage
+  method: POST
+  path: /send_message
+  description: Send a message to a subscribed user
+- name: broadcast_message
+  operationId: broadcastMessage
+  method: POST
+  path: /broadcast_message
+  description: Broadcast a message to up to 300 subscribed users
+- name: get_account_info
+  operationId: getAccountInfo
+  method: POST
+  path: /get_account_info
+  description: Get the bot account's details
+- name: get_user_details
+  operationId: getUserDetails
+  method: POST
+  path: /get_user_details
+  description: Get details of a subscribed user
+- name: get_online
+  operationId: getOnline
+  method: POST
+  path: /get_online
+  description: Get online status of up to 100 users

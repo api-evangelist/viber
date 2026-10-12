@@ -1,0 +1,122 @@
+generated: '2026-10-13'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 9
+  own: 9
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - identity
+  - other
+  - portal
+  - support
+  - website
+hosts:
+- host: account.viber.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: viber.com
+  role: identity
+  relation: own
+- host: api.viber.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: viber.com
+  role: api
+  relation: own
+- host: chatapi.viber.com
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: viber.com
+  role: other
+  relation: own
+- host: chats.viber.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: viber.com
+  role: other
+  relation: own
+- host: developers.viber.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - DeveloperPortal
+  - Documentation
+  serves:
+  - docs
+  title: Viber Developers Hub | Viber lets everyone in the world connect. Freely. Million
+  status: 200
+  registrable_domain: viber.com
+  role: portal
+  relation: own
+- host: download.viber.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: viber.com
+  role: other
+  relation: own
+- host: help.viber.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  types:
+  - Support
+  serves:
+  - docs
+  registrable_domain: viber.com
+  role: support
+  relation: own
+- host: support.viber.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: viber.com
+  role: support
+  relation: own
+- host: www.viber.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  serves: []
+  registrable_domain: viber.com
+  role: website
+  relation: own

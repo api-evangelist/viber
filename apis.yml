@@ -1,23 +1,77 @@
 aid: viber
 name: Rakuten Viber
-description: 'Rakuten Viber is a company surfaced via the API Evangelist harvest backlog (source: market-gap)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://www.viber.com/app/uploads/social-sharing-image-2026.png
+description: Rakuten Viber is a messaging and calling app. Its developer hub publishes the Viber REST Bot API (chatapi.viber.com/pa) for building bots that send and receive messages, with webhook callbacks and official Node.js and Python SDKs.
 url: https://raw.githubusercontent.com/api-evangelist/viber/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:market-gap
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (local-v5; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-13'
 modified: '2026-10-13'
 tags:
 - Company
-apis: []
+- Messaging
+- Chatbots
+- Communications
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Spectral
+  url: rules/viber-rules.yml
+- type: Conformance
+  url: conformance/viber-conformance.yml
+- type: Hosts
+  url: hosts/viber-hosts.yml
+- type: Vendors
+  url: vendors/viber-vendors.yml
+- type: SDKs
+  url: packages/viber-packages.yml
+- type: Packages
+  url: packages/viber-packages.yml
+- type: TermsOfService
+  url: https://www.viber.com/en/terms
+- type: Security
+  url: https://www.viber.com/security/
+- type: GitHubOrganization
+  url: https://github.com/Viber
 - type: Website
   url: https://www.viber.com
+- type: DeveloperPortal
+  url: https://developers.viber.com/
+- type: Documentation
+  url: https://developers.viber.com/docs/
+- type: Support
+  url: https://help.viber.com/hc/en-us
+- type: VulnerabilityDisclosure
+  url: security/viber-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/viber-domain-security.yml
+apis:
+- aid: viber:viber-rest-bot-api
+  name: Viber REST Bot API
+  description: 'REST API for Viber bots: set webhooks, send and broadcast messages, and read account, user and online-status details. Authenticated with the X-Viber-Auth-Token header.'
+  humanURL: https://developers.viber.com/docs/api/rest-bot-api/
+  baseURL: https://chatapi.viber.com/pa
+  tags:
+  - Bots
+  - Messaging
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/viber-rest-bot-api.yml
+  - type: Documentation
+    url: https://developers.viber.com/docs/api/rest-bot-api/
+  - type: SDK
+    url: https://developers.viber.com/docs/api/nodejs-bot-api/
+  - type: SDK
+    url: https://developers.viber.com/docs/api/python-bot-api/
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v5

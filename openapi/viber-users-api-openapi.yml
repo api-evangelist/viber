@@ -1,0 +1,81 @@
+openapi: 3.2.0
+info:
+  title: Viber REST Bot Users API
+  description: GENERATED FROM DOCUMENTATION by API Evangelist. Viber publishes no machine-readable contract; every operation below was read from the "Resource URL" blocks of https://developers.viber.com/docs/api/rest-bot-api/ on 2026-10-13. All calls are HTTPS POST with a JSON body and the X-Viber-Auth-Token header. Responses carry status (0 = success) and status_message.
+  version: '2026-10-13'
+  x-generated-from: documentation
+  x-generated-by: api-evangelist (hand-read from docs; generate-contract-from-docs.py found no verbatim METHOD /path pattern)
+  x-source: https://developers.viber.com/docs/api/rest-bot-api/
+  x-last-validated: '2026-10-13'
+servers:
+- url: https://chatapi.viber.com/pa
+security:
+- ViberAuthToken: []
+tags:
+- name: Users
+paths:
+  /get_user_details:
+    post:
+      operationId: getUserDetails
+      summary: Get details of a subscribed user
+      tags:
+      - Users
+      description: Can be sent twice during a 12 hours period for each user ID.
+      x-source: https://developers.viber.com/docs/api/rest-bot-api/#get-user-details
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - id
+              properties:
+                id:
+                  type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/Status'
+  /get_online:
+    post:
+      operationId: getOnline
+      summary: Get online status of up to 100 users
+      tags:
+      - Users
+      x-source: https://developers.viber.com/docs/api/rest-bot-api/#get-online
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - ids
+              properties:
+                ids:
+                  type: array
+                  maxItems: 100
+                  items:
+                    type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/Status'
+components:
+  responses:
+    Status:
+      description: Action result; status 0 for success, otherwise an error code
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+              status_message:
+                type: string
+            additionalProperties: true
+  securitySchemes:
+    ViberAuthToken:
+      type: apiKey
+      in: header
+      name: X-Viber-Auth-Token

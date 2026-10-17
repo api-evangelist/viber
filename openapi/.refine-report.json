@@ -1,0 +1,21 @@
+{
+  "provider": "viber",
+  "sources": [
+    "_ae-authored/viber-rest-bot-api.yml"
+  ],
+  "outputs": [
+    "viber-account-api-openapi.yml",
+    "viber-messages-api-openapi.yml",
+    "viber-users-api-openapi.yml",
+    "viber-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "viber-rest-bot-api.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+4 apis, 4 total)"
+  ],
+  "skipped": []
+}

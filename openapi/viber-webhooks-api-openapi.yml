@@ -1,0 +1,72 @@
+openapi: 3.2.0
+info:
+  title: Viber REST Bot Webhooks API
+  description: GENERATED FROM DOCUMENTATION by API Evangelist. Viber publishes no machine-readable contract; every operation below was read from the "Resource URL" blocks of https://developers.viber.com/docs/api/rest-bot-api/ on 2026-10-13. All calls are HTTPS POST with a JSON body and the X-Viber-Auth-Token header. Responses carry status (0 = success) and status_message.
+  version: '2026-10-13'
+  x-generated-from: documentation
+  x-generated-by: api-evangelist (hand-read from docs; generate-contract-from-docs.py found no verbatim METHOD /path pattern)
+  x-source: https://developers.viber.com/docs/api/rest-bot-api/
+  x-last-validated: '2026-10-13'
+servers:
+- url: https://chatapi.viber.com/pa
+security:
+- ViberAuthToken: []
+tags:
+- name: Webhooks
+paths:
+  /set_webhook:
+    post:
+      operationId: setWebhook
+      summary: Set or remove the account webhook
+      tags:
+      - Webhooks
+      x-source: https://developers.viber.com/docs/api/rest-bot-api/#setting-a-webhook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - url
+              properties:
+                url:
+                  type: string
+                  description: Account webhook URL (SSL required); empty string removes the webhook
+                event_types:
+                  type: array
+                  items:
+                    type: string
+                    enum:
+                    - delivered
+                    - seen
+                    - failed
+                    - subscribed
+                    - unsubscribed
+                    - conversation_started
+                send_name:
+                  type: boolean
+                send_photo:
+                  type: boolean
+      responses:
+        '200':
+          $ref: '#/components/responses/Status'
+components:
+  responses:
+    Status:
+      description: Action result; status 0 for success, otherwise an error code
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+              status_message:
+                type: string
+            additionalProperties: true
+  securitySchemes:
+    ViberAuthToken:
+      type: apiKey
+      in: header
+      name: X-Viber-Auth-Token

@@ -52,18 +52,64 @@ common:
 - type: DomainSecurity
   url: security/viber-domain-security.yml
 apis:
-- aid: viber:viber-rest-bot-api
-  name: Viber REST Bot API
-  description: 'REST API for Viber bots: set webhooks, send and broadcast messages, and read account, user and online-status details. Authenticated with the X-Viber-Auth-Token header.'
+- aid: viber:viber-account-api
+  name: Rakuten Viber Account API
+  description: The Account API from Rakuten Viber — 1 operation(s) for account.
   humanURL: https://developers.viber.com/docs/api/rest-bot-api/
   baseURL: https://chatapi.viber.com/pa
   tags:
-  - Bots
-  - Messaging
+  - Account
+  properties:
+  - type: OpenAPI
+    url: openapi/viber-account-api-openapi.yml
+  - type: Documentation
+    url: https://developers.viber.com/docs/api/rest-bot-api/
+  - type: SDK
+    url: https://developers.viber.com/docs/api/nodejs-bot-api/
+  - type: SDK
+    url: https://developers.viber.com/docs/api/python-bot-api/
+- aid: viber:viber-messages-api
+  name: Rakuten Viber Messages API
+  description: The Messages API from Rakuten Viber — 2 operation(s) for messages.
+  humanURL: https://developers.viber.com/docs/api/rest-bot-api/
+  baseURL: https://chatapi.viber.com/pa
+  tags:
+  - Messages
+  properties:
+  - type: OpenAPI
+    url: openapi/viber-messages-api-openapi.yml
+  - type: Documentation
+    url: https://developers.viber.com/docs/api/rest-bot-api/
+  - type: SDK
+    url: https://developers.viber.com/docs/api/nodejs-bot-api/
+  - type: SDK
+    url: https://developers.viber.com/docs/api/python-bot-api/
+- aid: viber:viber-users-api
+  name: Rakuten Viber Users API
+  description: The Users API from Rakuten Viber — 2 operation(s) for users.
+  humanURL: https://developers.viber.com/docs/api/rest-bot-api/
+  baseURL: https://chatapi.viber.com/pa
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/viber-users-api-openapi.yml
+  - type: Documentation
+    url: https://developers.viber.com/docs/api/rest-bot-api/
+  - type: SDK
+    url: https://developers.viber.com/docs/api/nodejs-bot-api/
+  - type: SDK
+    url: https://developers.viber.com/docs/api/python-bot-api/
+- aid: viber:viber-webhooks-api
+  name: Rakuten Viber Webhooks API
+  description: The Webhooks API from Rakuten Viber — 1 operation(s) for webhooks.
+  humanURL: https://developers.viber.com/docs/api/rest-bot-api/
+  baseURL: https://chatapi.viber.com/pa
+  tags:
   - Webhooks
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/viber-rest-bot-api.yml
+    url: openapi/viber-webhooks-api-openapi.yml
   - type: Documentation
     url: https://developers.viber.com/docs/api/rest-bot-api/
   - type: SDK

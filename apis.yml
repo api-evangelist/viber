@@ -74,6 +74,8 @@ apis:
   humanURL: https://developers.viber.com/docs/api/rest-bot-api/
   baseURL: https://chatapi.viber.com/pa
   tags:
+  - Message
+  tags_raw:
   - Messages
   properties:
   - type: OpenAPI
@@ -90,6 +92,8 @@ apis:
   humanURL: https://developers.viber.com/docs/api/rest-bot-api/
   baseURL: https://chatapi.viber.com/pa
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
@@ -106,6 +110,8 @@ apis:
   humanURL: https://developers.viber.com/docs/api/rest-bot-api/
   baseURL: https://chatapi.viber.com/pa
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
